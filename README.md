@@ -1,0 +1,1 @@
+# naoserei_interrompida
