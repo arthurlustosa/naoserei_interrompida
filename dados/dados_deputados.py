@@ -44,7 +44,7 @@ def inserirDeputadoDetalhes(detalhes):
 def requestDeputados(pagina):
     URL = "https://dadosabertos.camara.leg.br/api/v2/deputados"
 
-    PARAMS = { 'ordem':  'ASC', 'ordenarPor': 'nome', 'pagina': pagina, 'itens': '50', 'siglaSexo': 'F'}
+    PARAMS = { 'ordem':  'ASC', 'ordenarPor': 'nome', 'pagina': pagina, 'itens': '50'}
 
     r = requests.get(URL, PARAMS)
 
@@ -202,8 +202,8 @@ def requestGastos():
     cur.close()
     conn.close()
 
-# requestDeputados(1)
+requestDeputados(1)
 requestDeputadosDetalhes()
-# requestProposituras()
-# requestPropositurasDetalhes()
-# requestGastos()
+requestProposituras()
+requestPropositurasDetalhes()
+requestGastos()

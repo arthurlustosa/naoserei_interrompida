@@ -1,0 +1,27 @@
+.pergunta {
+  text-align: -webkit-center;
+}
+
+.card-resposta-danger {
+  background-color: #DE8C7A !important;
+}
+
+.card-resposta-success {
+  background-color: #64BB93 !important;
+}
+
+.pergunta > h2 {
+  max-width: 700px;
+  font-size: 30px;
+}
+
+.card-resposta {
+  background-color: #DEDEDE;
+  padding: 1.6em 0.5em;
+  border-radius: 15px;
+}
+
+.card-resposta:hover {
+  cursor: pointer;
+  background-color: #F3F3F3;
+}

@@ -1,3 +1,62 @@
-<p>
-  quiz works!
-</p>
+<div class="row">
+  <div class="col-md-12" style="text-align: -webkit-center;">
+    <img id="nav1" src="assets/navegador1.png" />
+    <img id="nav2" src="assets/navegador2.png" style="display: none;" />
+    <img id="nav3" src="assets/navegador3.png" style="display: none;" />
+    <img id="nav4" src="assets/navegador4.png" style="display: none;" />
+    <img id="nav5" src="assets/navegador5.png" style="display: none;" />
+    <img id="nav6" src="assets/navegador6.png" style="display: none;" />
+    <img id="nav7" src="assets/navegador7.png" style="display: none;" />
+    <img id="nav8" src="assets/navegador8.png" style="display: none;" />
+    <img id="nav9" src="assets/navegador9.png" style="display: none;" />
+    <img id="nav10" src="assets/navegador10.png" style="display: none;" />
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 pergunta">
+    <h2>{{perguntas[step - 1].texto}}</h2>
+  </div>
+</div>
+
+<div class="row" style="text-align: -webkit-center; margin-bottom: 30px;">
+  <div class="col-md-3">
+    <div id="card-resp-1" class="card-resposta" (click)="clickResposta(1, perguntas[step - 1])">
+      <p>{{perguntas[step - 1].opcoes[0].texto}}</p>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div id="card-resp-2" class="card-resposta" (click)="clickResposta(2, perguntas[step - 1])">
+      <p>{{perguntas[step - 1].opcoes[1].texto}}</p>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div id="card-resp-3" class="card-resposta" (click)="clickResposta(3, perguntas[step - 1])">
+      <p>{{perguntas[step - 1].opcoes[2].texto}}</p>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div id="card-resp-4" class="card-resposta" (click)="clickResposta(4, perguntas[step - 1])">
+      <p>{{perguntas[step - 1].opcoes[3].texto}}</p>
+    </div>
+  </div>
+</div>
+
+<div id="resposta" style="margin-bottom: 50px; margin-top: 3em; display: none;">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-2" style="flex-basis: 11.666667%; max-width: 11.666667%;">
+      <img src="assets/acertopergunta.png" style="max-height: 6em;" />
+    </div>
+    <div class="col-md-7">
+      <p style="margin-top: 0px;">
+        {{perguntas[step - 1].explanation}}
+      </p>
+    </div>
+  </div>
+  <div class="row" style="text-align: -webkit-center;">
+    <div class="col-md-12">
+      <button class="btn-faca-teste" (click)="clickProximo()">Próximo</button>
+    </div>
+  </div>
+</div>
